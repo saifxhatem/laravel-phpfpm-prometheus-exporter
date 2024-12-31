@@ -69,3 +69,7 @@ This will trigger a scale up when your average worker utilization hits 50%
 
 # Full Example
 Coming soon.
+
+# Note
+
+This project was heavily inspired by [hipages/php-fpm_exporter](https://github.com/hipages/php-fpm_exporter).
