@@ -1,0 +1,6 @@
+services:
+  php:
+    container_name: 'fpm-prometheus-exporter-installer'
+    image: 'saifxhatem/php:8.2-fpm-alpine3.16'
+    volumes:
+      - .:/var/www/html

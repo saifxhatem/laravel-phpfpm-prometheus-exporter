@@ -1,0 +1,30 @@
+{
+    "name": "saifh/laravel-phpfpm-prometheus-exporter",
+    "description": "Exposes a prometheus /metrics endpoint in your Laravel application, intended for use as a Kubernetes HPA driver.",
+    "type": "library",
+    "require": {
+        "promphp/prometheus_client_php": "^2.13",
+        "laravel/laravel": "^6|^7|^8|^9|^10|^11"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Saifh\\LaravelPhpFpmPrometheusExporter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Saif Hatem"
+        }
+    ],
+    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Saifh\\LaravelPhpFpmPrometheusExporter\\PrometheusServiceProvider"
+            ]
+        }
+    }
+
+}
