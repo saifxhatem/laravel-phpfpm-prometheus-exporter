@@ -41,12 +41,12 @@ class PrometheusServiceProvider extends ServiceProvider
             $registry = null;
             if (config('prometheus.memory_store') === 'redis') {
                 $redisAdapter = new Redis([
-                    'host'     => config('prometheus.redis_configuration.redis_host'),
-                    'port'     => config('prometheus.redis_configuration.redis_port'),
-                    'password' => config('prometheus.redis_configuration.redis_password'),
-                    'user'     => config('prometheus.redis_configuration.redis_username'),
+                    'host'     => config('prometheus.redis_configuration.host'),
+                    'port'     => config('prometheus.redis_configuration.port'),
+                    'password' => config('prometheus.redis_configuration.password'),
+                    'user'     => config('prometheus.redis_configuration.username'),
                     //why is this cast needed when the value is an int?
-                    'database' => (int) config('prometheus.redis_configuration.redis_database'),
+                    'database' => (int) config('prometheus.redis_configuration.database'),
                 ]);
                 $registry = new CollectorRegistry($redisAdapter);
             } else {
