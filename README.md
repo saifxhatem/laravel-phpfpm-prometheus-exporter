@@ -10,6 +10,11 @@ It exposes 3 metrics:
 
 This can be used in conjunction with [Prometheus Adapter](https://github.com/kubernetes-sigs/prometheus-adapter) to give you new metrics to scale your application up and down with Kubernetes.
 
+# Config
+Publish the config file via
+`php artisan vendor:publish --tag=prometheus`
+to customize your configuration.
+
 # Prometheus Adapter Config
 
 Given the following rule:
